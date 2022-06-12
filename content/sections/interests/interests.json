@@ -1,56 +1,56 @@
 {
   "interests": [
     {
-      "label": "Quick and Easy Setup",
+      "label": "Product Management",
       "image": {
         "src": "../../images/joystick.png",
         "alt": ""
       }
     },
     {
-      "label": "Content via Markdown",
+      "label": "Communications",
       "image": {
         "src": "../../images/notebook.png",
         "alt": ""
       }
     },
     {
-      "label": "Responsive Design",
+      "label": "Web Development",
       "image": {
         "src": "../../images/nail-polish.png",
         "alt": ""
       }
     },
     {
-      "label": "Medium Integration",
+      "label": "Digital Media",
       "image": {
         "src": "../../images/medium.png",
         "alt": ""
       }
     },
     {
-      "label": "Animations",
+      "label": "Marketing",
       "image": {
         "src": "../../images/gem-stone.png",
         "alt": ""
       }
     },
     {
-      "label": "PWA (Offline Support)",
+      "label": "Event Management",
       "image": {
         "src": "../../images/mobile-phone.png",
         "alt": ""
       }
     },
     {
-      "label": "Modern Tech-Stack",
+      "label": "Technical Writing",
       "image": {
         "src": "../../images/gatsby.png",
         "alt": ""
       }
     },
     {
-      "label": "Blazing Fast",
+      "label": "Awesomness",
       "image": {
         "src": "../../images/high-voltage.png",
         "alt": ""

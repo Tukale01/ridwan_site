@@ -1,7 +1,7 @@
 {
   "name": "Ridwan Tukale Website",
   "version": "1.0.0",
-  "description": "A Gatsby Starter Project to easily get started with the Portfolio Minimal Theme.",
+  "description": "Ridwan is a software engineer turn product manager, creating meaningful experiences on the web.",
   "scripts": {
     "clean": "gatsby clean",
     "develop": "gatsby develop",

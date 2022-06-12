@@ -1,14 +1,11 @@
 ---
-imageSrc: "../../images/charles-deluvio-DgoyKNgPiFQ-unsplash.jpg"
-imageAlt: "About Gatsby Theme Portfolio Minimal"
+imageSrc: "../../images/ridwan.jpeg"
+imageAlt: "About Ridwan Tukale"
 ---
 
-Ridwan Tukale is a great fighter and warior 
+Ridwan Tukale is the co-founder and a product manager at <a href="https://www.fikrcamp.com" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link"><u>Fikrcamp</u></a> the first coding boot camp in Hargeisa that helps people who want to break into tech grapple with and master coding skills to pursue careers in technology. 
 
-It has predefined sections for your bio, skills, projects, and contact details. If you are a writer on Medium, you can integrate your latest articles in a distinct section as well. While building the theme, I tried to keep the setup as simple as possible while keeping everything configurable if you like to.
+Asa communication specialist helps non-profits, public and private sector institutions grapple with new technologies and use them to build partnerships, increase their reach and exposure all the while creating meaningful experiences that attract, engage and delight their targeted audiences.
 
-Using theme composition, you can easily customize the CSS theme to your own preferences - e.g. change colors, fonts, etc.
-
-Last but not least, it has some cool features you can opt-in to: Dark Mode, Splash Screen, Cookie Banner, and more to find out :)
 
 Photo by <a href="https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link"><u>Charles Deluvio</u></a> on Unsplash

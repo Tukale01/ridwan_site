@@ -6,13 +6,13 @@
   },
   "title": "I'm Ridwan Tukale",
   "subtitle": {
-    "prefix": "Your partner in  ",
-    "highlight": "Communication, Development",
+    "prefix": "Product Manager ",
+    "highlight": "at Fikrcamp",
     "suffix": "."
   },
-  "description": "A Gatsby Starter Project to easily get started with Portfolio Minimal theme.",
+  "description": "Ridwan is a software engineer turn product manager, creating meaningful experiences on the web.",
   "socialProfiles": {
     "from": ["LinkedIn", "Medium", "Github", "Mail"],
-    "showIcons": false
+    "showIcons": true
   }
 }
