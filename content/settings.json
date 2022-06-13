@@ -11,7 +11,7 @@
     "social": {
       "behance": "https://behance.com",
       "github": "https://github.com/Tukale01",
-      "medium": "https://konstantinmuenster.medium.com",
+      "medium": "https://medium.com/@ridwanhamud",
       "linkedin": "https://www.linkedin.com/in/ridwantukale/",
       "mail": "mailto:ridwan@fikrcamp.com"
     }
@@ -23,7 +23,7 @@
         { "label": "About", "url": "/#about" },
         { "label": "Blog", "url": "/blog" },
         { "label": "Projects", "url": "/#features" },
-        { "label": "Fikrcamp", "url": "/#" }
+        { "label": "Fikrcamp", "url": "https://www.fikrcamp.com" }
       ],
       "ctaButton": {
         "openNewTab": true,

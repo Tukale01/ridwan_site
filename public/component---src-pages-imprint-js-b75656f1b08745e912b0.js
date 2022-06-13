@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkRidwan_Tukale_Website=self.webpackChunkRidwan_Tukale_Website||[]).push([[683],{3598:function(e,t,n){n.r(t),n.d(t,{default:function(){return a}});var i=n(7294),l=n(8457);function a(){return i.createElement(i.Fragment,null,i.createElement(l.pQ,{title:"Imprint",useTitleTemplate:!0,noIndex:!0}),i.createElement(l.T3,null,i.createElement(l.Ek,{sectionId:"imprint",heading:"Imprint"})))}}}]);
+//# sourceMappingURL=component---src-pages-imprint-js-b75656f1b08745e912b0.js.map

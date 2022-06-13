@@ -1,68 +1,159 @@
-exports.id = "component---node-modules-gatsby-theme-portfolio-minimal-src-pages-404-tsx";
-exports.ids = ["component---node-modules-gatsby-theme-portfolio-minimal-src-pages-404-tsx"];
+exports.id = 965;
+exports.ids = [965];
 exports.modules = {
 
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/CookieBar/style.module.css":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/CookieBar/style.module.css ***!
-  \***********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ 3248:
+/***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CookieBar": () => (/* binding */ CookieBar)
-/* harmony export */ });
-// Exports
-var CookieBar = "style-module--CookieBar--kxAGJ";
-
+exports.validGATrackingId=function(options){return options.trackingId&&options.trackingId.trim()!=="";};exports.validGTMTrackingId=function(options){return options.trackingId&&options.trackingId.trim()!=="";};exports.validFbPixelId=function(options){return options.pixelId&&options.pixelId.trim()!=="";};exports.validTikTokPixelId=function(options){return options.pixelId&&options.pixelId.trim()!=="";};exports.validHotjarId=function(options){return options.hjid&&options.hjid.trim()!==""&&options.hjsv&&options.hjsv.trim()!=="";};exports.validChatwootConfig=function(options){return options.baseUrl&&options.baseUrl.trim()!==""&&options.websiteToken&&options.websiteToken.trim()!=="";};exports.validLinkedinTrackingId=function(options){return options.trackingId&&options.trackingId.trim()!=="";};exports.getCookie=function(name){var v=document.cookie.match('(^|;) ?'+name+'=([^;]*)(;|$)');return v?v[2]:null;};exports.isEnvironmentValid=function(environments){var currentEnvironment=({}).ENV||"production"||0;return environments.includes(currentEnvironment);};
 
 /***/ }),
 
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Footer/style.module.css":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/Footer/style.module.css ***!
-  \********************************************************************************************/
+/***/ 9024:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var _require=__webpack_require__(8576),initializeAndTrackGoogleAnalytics=_require.initializeAndTrackGoogleAnalytics,initializeAndTrackGoogleTagManager=_require.initializeAndTrackGoogleTagManager,initializeAndTrackFacebookPixel=_require.initializeAndTrackFacebookPixel,initializeAndTrackTikTokPixel=_require.initializeAndTrackTikTokPixel,initializeAndTrackHotjar=_require.initializeAndTrackHotjar,initializeChatwoot=_require.initializeChatwoot,initializeLinkedin=_require.initializeLinkedin;var _require2=__webpack_require__(3248),isEnvironmentValid=_require2.isEnvironmentValid;exports.v=function(location){var options=window.gatsbyPluginGDPRCookiesOptions;if(isEnvironmentValid(options.environments)){if(location===undefined||location===null){console.error('Please provide a reach router location to the initializeAndTrack function.');}else{initializeAndTrackGoogleAnalytics(options.googleAnalytics,location);initializeAndTrackGoogleTagManager(options.googleTagManager,location);initializeAndTrackFacebookPixel(options.facebookPixel);initializeAndTrackTikTokPixel(options.tikTokPixel);initializeAndTrackHotjar(options.hotjar);initializeChatwoot(options.chatwoot);initializeLinkedin(options.linkedin);}}};
+
+/***/ }),
+
+/***/ 8555:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var _require=__webpack_require__(3248),validChatwootConfig=_require.validChatwootConfig,getCookie=_require.getCookie;exports.addChatwoot=function(options){return new Promise(function(resolve,reject){if(window.gatsbyPluginGDPRCookiesChatwootAdded)return resolve(true);/* eslint-disable */!function(d,t){var BASE_URL=options.baseUrl;var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=BASE_URL+"/packs/js/sdk.js";g.defer=true;g.async=true;s.parentNode.insertBefore(g,s);g.onload=function(){window.chatwootSDK.run({websiteToken:options.websiteToken,baseUrl:BASE_URL});};}(document,"script");/* eslint-enable */window.gatsbyPluginGDPRCookiesChatwootAdded=true;resolve(true);});};
+
+/***/ }),
+
+/***/ 9120:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var _require=__webpack_require__(3248),validFbPixelId=_require.validFbPixelId,getCookie=_require.getCookie;exports.addFacebookPixel=function(){return new Promise(function(resolve,reject){if(window.gatsbyPluginGDPRCookiesFacebookPixelAdded)return resolve(true);/* eslint-disable */!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments);};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');/* eslint-enable */window.gatsbyPluginGDPRCookiesFacebookPixelAdded=true;resolve(true);});};exports.initializeFacebookPixel=function(options){if(!window.gatsbyPluginGDPRCookiesFacebookPixelInitialized&&getCookie(options.cookieName)==="true"&&validFbPixelId(options)){window.fbq("init",options.pixelId);window.gatsbyPluginGDPRCookiesFacebookPixelInitialized=true;}};exports.trackFacebookPixel=function(options){if(getCookie(options.cookieName)==="true"&&validFbPixelId(options)&&typeof window.fbq==="function"){window.fbq("track","PageView");}};
+
+/***/ }),
+
+/***/ 4054:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var _require=__webpack_require__(3248),validGATrackingId=_require.validGATrackingId,getCookie=_require.getCookie;exports.addGoogleAnalytics=function(_ref){var trackingId=_ref.trackingId;return new Promise(function(resolve,reject){if(window.gatsbyPluginGDPRCookiesGoogleAnalyticsAdded)return resolve(true);var head=document.getElementsByTagName('head')[0];var script=document.createElement("script");script.type="text/javascript";script.onload=function(){window.gatsbyPluginGDPRCookiesGoogleAnalyticsAdded=true;resolve(true);};script.src="https://www.googletagmanager.com/gtag/js?id="+trackingId;head.appendChild(script);});};exports.initializeGoogleAnalytics=function(options){if(!window.gatsbyPluginGDPRCookiesGoogleAnalyticsInitialized&&getCookie(options.cookieName)==="true"&&validGATrackingId(options)){window.dataLayer=window.dataLayer||[];window.gtag=function(){window.dataLayer.push(arguments);};window.gtag('js',new Date());var gaAnonymize=options.anonymize;var gaAllowAdFeatures=options.allowAdFeatures;gaAnonymize=gaAnonymize!==undefined?gaAnonymize:true;gaAllowAdFeatures=gaAllowAdFeatures!==undefined?gaAllowAdFeatures:true;window.gtag('config',options.trackingId,{'anonymize_ip':gaAnonymize,'allow_google_signals':gaAllowAdFeatures});window.gatsbyPluginGDPRCookiesGoogleAnalyticsInitialized=true;}};exports.trackGoogleAnalytics=function(options,location){if(getCookie(options.cookieName)==="true"&&validGATrackingId(options)&&typeof window.gtag==="function"){var pagePath=location?location.pathname+location.search+location.hash:undefined;window.gtag("event","page_view",{page_path:pagePath});}};
+
+/***/ }),
+
+/***/ 2437:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var _require=__webpack_require__(3248),validGTMTrackingId=_require.validGTMTrackingId,getCookie=_require.getCookie;exports.addGoogleTagManager=function(_ref,environmentParamStr){var trackingId=_ref.trackingId,dataLayerName=_ref.dataLayerName;return new Promise(function(resolve,reject){if(window.gatsbyPluginGDPRCookiesGoogleTagManagerAdded)return resolve(true);/* eslint-disable */!function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl+environmentParamStr;f.parentNode.insertBefore(j,f);}(window,document,"script",dataLayerName,trackingId);/* eslint-enable */var iframe=document.createElement("iframe");iframe.key="gatsby-plugin-gdpr-cookies-google-tagmanager-iframe";iframe.src="https://www.googletagmanager.com/ns.html?id="+trackingId+environmentParamStr;iframe.height=0;iframe.width=0;iframe.style="display: none; visibility: hidden";document.body.insertBefore(iframe,document.body.firstChild);window.gatsbyPluginGDPRCookiesGoogleTagManagerAdded=true;resolve(true);});};exports.initializeGoogleTagManager=function(options){// console.log(`initing tag manager`)
+if(!window.gatsbyPluginGDPRCookiesGoogleTagManagerInitialized&&getCookie(options.cookieName)==="true"&&validGTMTrackingId(options)){window.dataLayer=window.dataLayer||[];window.gtag=function(){window.dataLayer.push(arguments);};window.gtag("js",new Date());var gaAnonymize=options.anonymize;var gaAllowAdFeatures=options.allowAdFeatures;gaAnonymize=gaAnonymize!==undefined?gaAnonymize:true;gaAllowAdFeatures=gaAllowAdFeatures!==undefined?gaAllowAdFeatures:true;window.gtag("config",options.trackingId,{anonymize_ip:gaAnonymize,allow_google_signals:gaAllowAdFeatures});}};exports.trackGoogleTagManager=function(options,location){// console.log(`tracking tag manager`)
+if(getCookie(options.cookieName)==="true"&&validGTMTrackingId(options)&&typeof window.gtag==="function"){var pagePath=location?location.pathname+location.search+location.hash:undefined;window.gtag("event","page_view",{page_path:pagePath});}setTimeout(function(){var data=options.dataLayerName?window[options.dataLayerName]:window.dataLayer;if(typeof data==="object"){var eventName=options.routeChangeEvent||"gatsbyRouteChange";data.push({event:eventName});}},50);};
+
+/***/ }),
+
+/***/ 489:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var _require=__webpack_require__(3248),validHotjarId=_require.validHotjarId,getCookie=_require.getCookie;exports.addHotjar=function(options){return new Promise(function(resolve,reject){if(window.gatsbyPluginGDPRCookiesHotjarAdded)return resolve(true);/* eslint-disable */!function(h,o,t,j,a,r){h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments);};h._hjSettings={hjid:options.hjid,hjsv:options.hjsv};a=o.getElementsByTagName('head')[0];r=o.createElement('script');r.async=1;r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;a.appendChild(r);}(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');/* eslint-enable */window.gatsbyPluginGDPRCookiesHotjarAdded=true;resolve(true);});};exports.initializeHotjar=function(options){if(!window.gatsbyPluginGDPRCookiesHotjarInitialized&&getCookie(options.cookieName)==="true"&&validHotjarId(options)){window.gatsbyPluginGDPRCookiesHotjarInitialized=true;}};exports.trackHotjar=function(options){// this is supposed to so nothing
+};
+
+/***/ }),
+
+/***/ 8576:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var _require=__webpack_require__(3248),validGATrackingId=_require.validGATrackingId,validGTMTrackingId=_require.validGTMTrackingId,validFbPixelId=_require.validFbPixelId,validTikTokPixelId=_require.validTikTokPixelId,validHotjarId=_require.validHotjarId,validChatwootConfig=_require.validChatwootConfig,validLinkedinTrackingId=_require.validLinkedinTrackingId,getCookie=_require.getCookie;var _require2=__webpack_require__(4054),addGoogleAnalytics=_require2.addGoogleAnalytics,initializeGoogleAnalytics=_require2.initializeGoogleAnalytics,trackGoogleAnalytics=_require2.trackGoogleAnalytics;var _require3=__webpack_require__(2437),addGoogleTagManager=_require3.addGoogleTagManager,initializeGoogleTagManager=_require3.initializeGoogleTagManager,trackGoogleTagManager=_require3.trackGoogleTagManager;var _require4=__webpack_require__(9120),addFacebookPixel=_require4.addFacebookPixel,initializeFacebookPixel=_require4.initializeFacebookPixel,trackFacebookPixel=_require4.trackFacebookPixel;var _require5=__webpack_require__(6499),addTikTokPixel=_require5.addTikTokPixel,initializeTikTokPixel=_require5.initializeTikTokPixel,trackTikTokPixel=_require5.trackTikTokPixel;var _require6=__webpack_require__(489),addHotjar=_require6.addHotjar,initializeHotjar=_require6.initializeHotjar,trackHotjar=_require6.trackHotjar;var _require7=__webpack_require__(8555),addChatwoot=_require7.addChatwoot;var _require8=__webpack_require__(9082),addLinkedin=_require8.addLinkedin,initializeLinkedin=_require8.initializeLinkedin;exports.initializeAndTrackGoogleAnalytics=function(options,location){if(getCookie(options.cookieName)==="true"&&validGATrackingId(options)){addGoogleAnalytics(options).then(function(status){if(status){initializeGoogleAnalytics(options);trackGoogleAnalytics(options,location);}});}};exports.initializeAndTrackGoogleTagManager=function(options,location){if(getCookie(options.cookieName)==="true"&&validGTMTrackingId(options)){var environmentParamStr="";if(options.gtmAuth&&options.gtmPreview){environmentParamStr="&gtm_auth="+options.gtmAuth+"&gtm_preview="+options.gtmPreview+"&gtm_cookies_win=x";}addGoogleTagManager(options,environmentParamStr).then(function(status){if(status){initializeGoogleTagManager(options);trackGoogleTagManager(options,location);}});}};exports.initializeAndTrackFacebookPixel=function(options){if(getCookie(options.cookieName)==="true"&&validFbPixelId(options)){addFacebookPixel().then(function(status){if(status){initializeFacebookPixel(options);trackFacebookPixel(options);}});}};exports.initializeAndTrackTikTokPixel=function(options){if(getCookie(options.cookieName)==="true"&&validTikTokPixelId(options)){addTikTokPixel().then(function(status){if(status){initializeTikTokPixel(options);trackTikTokPixel(options);}});}};exports.initializeAndTrackHotjar=function(options){if(getCookie(options.cookieName)==="true"&&validHotjarId(options)){addHotjar(options).then(function(status){if(status){initializeHotjar(options);trackHotjar(options);}});}};exports.initializeLinkedin=function(options){if(getCookie(options.cookieName)==="true"&&validLinkedinTrackingId(options)){addLinkedin(options).then(function(status){if(status){initializeLinkedin(options);}});}};exports.initializeChatwoot=function(options){if(getCookie(options.cookieName)==="true"&&validChatwootConfig(options)){addChatwoot(options).then(function(status){if(status){console.info('Chat is added and running');}});}};
+
+/***/ }),
+
+/***/ 9082:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var _require=__webpack_require__(3248),validLinkedinTrackingId=_require.validLinkedinTrackingId,getCookie=_require.getCookie;exports.addLinkedin=function(options){return new Promise(function(resolve,reject){if(window.gatsbyPluginGDPRCookiesLinkedinAdded)return resolve(true);/* eslint-disable */ // LINKED IN SPECIFIC CODE HERE
+_linkedin_partner_id=options.trackingId;window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);/* eslint-enable */window.gatsbyPluginGDPRCookiesLinkedinAdded=true;resolve(true);});};exports.initializeLinkedin=function(options){if(!window.gatsbyPluginGDPRCookiesLinkedinInitialized&&getCookie(options.cookieName)==="true"&&validLinkedinTrackingId(options)){// (function(){
+var s=document.getElementsByTagName("script")[0];var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src="https://snap.licdn.com/li.lms-analytics/insight.min.js";s.parentNode.insertBefore(b,s);// })();
+window.gatsbyPluginGDPRCookiesLinkedinInitialized=true;}};
+
+/***/ }),
+
+/***/ 6499:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var _require=__webpack_require__(3248),validTikTokPixelId=_require.validTikTokPixelId,getCookie=_require.getCookie;exports.addTikTokPixel=function(){return new Promise(function(resolve,reject){if(window.gatsbyPluginGDPRCookiesTikTokPixelAdded)return resolve(true);/* eslint-disable */!function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)));};};for(var i=0;i<ttq.methods.length;i++){ttq.setAndDefer(ttq,ttq.methods[i]);}ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++){ttq.setAndDefer(e,ttq.methods[n]);}return e;},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date(),ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=i+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e);};}(window,document,'ttq');/* eslint-enable */window.gatsbyPluginGDPRCookiesTikTokPixelAdded=true;resolve(true);});};exports.initializeTikTokPixel=function(options){if(!window.gatsbyPluginGDPRCookiesTikTokPixelInitialized&&getCookie(options.cookieName)==="true"&&validTikTokPixelId(options)){window.ttq.load(options.pixelId);window.gatsbyPluginGDPRCookiesTikTokPixelInitialized=true;}};exports.trackTikTokPixel=function(options){if(getCookie(options.cookieName)==="true"&&validTikTokPixelId(options)&&typeof window.fbq==="function"){window.fbq("track","PageView");window.ttq.page();}};
+
+/***/ }),
+
+/***/ 283:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ContentWrapper": () => (/* binding */ ContentWrapper),
-/* harmony export */   "Footer": () => (/* binding */ Footer),
-/* harmony export */   "Links": () => (/* binding */ Links)
-/* harmony export */ });
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "f": () => (/* binding */ Animation)
+});
+
+// EXTERNAL MODULE: external "/Users/ridwantukale/Documents/code/ridwan_site/node_modules/react/index.js"
+var index_js_ = __webpack_require__(8005);
+var index_js_default = /*#__PURE__*/__webpack_require__.n(index_js_);
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useCastedRef.tsx
+function useCastedRef(){return index_js_default().useRef();}
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useOnScreen.tsx
+// https://usehooks.com/useOnScreen/
+function useOnScreen(ref,threshold=0.25){const{0:isIntersecting,1:setIntersecting}=(0,index_js_.useState)(false);(0,index_js_.useEffect)(()=>{const element=ref.current;const observer=new IntersectionObserver(([entry])=>{if(entry.isIntersecting){setIntersecting(true);observer.unobserve(entry.target);}},{threshold});if(element&&element instanceof Element)observer.observe(element);return()=>{if(element&&element instanceof Element)observer.unobserve(element);};},[ref,threshold]);return isIntersecting;}
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/Animation/index.tsx
+function Animation(props){var _props$type,_props$timing,_props$duration,_props$delay,_props$iterationCount,_props$fillMode;const ref=useCastedRef();const onScreen=useOnScreen(ref);// Set defaults
+const type=(_props$type=props.type)!==null&&_props$type!==void 0?_props$type:'fadeIn';const timing=(_props$timing=props.timing)!==null&&_props$timing!==void 0?_props$timing:'ease-out';const duration=(_props$duration=props.duration)!==null&&_props$duration!==void 0?_props$duration:200;const delay=(_props$delay=props.delay)!==null&&_props$delay!==void 0?_props$delay:0;const count=(_props$iterationCount=props.iterationCount)!==null&&_props$iterationCount!==void 0?_props$iterationCount:1;const fillMode=(_props$fillMode=props.fillMode)!==null&&_props$fillMode!==void 0?_props$fillMode:'backwards';return/*#__PURE__*/index_js_default().createElement("div",{ref:ref,className:props.className,onAnimationEnd:props.onAnimationEnd,style:onScreen?{...props.style,animationName:`${type}`,animationTimingFunction:`${timing}`,animationDuration:`${duration}ms`,animationDelay:`${delay}ms`,animationIterationCount:`${count}`,animationFillMode:`${fillMode}`}:{...props.style,opacity:0}},props.children);}
+
+/***/ }),
+
+/***/ 965:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "T": () => (/* binding */ Page)
+});
+
+// EXTERNAL MODULE: external "/Users/ridwantukale/Documents/code/ridwan_site/node_modules/react/index.js"
+var index_js_ = __webpack_require__(8005);
+var index_js_default = /*#__PURE__*/__webpack_require__.n(index_js_);
+// EXTERNAL MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/context/index.tsx
+var context = __webpack_require__(215);
+// EXTERNAL MODULE: ./.cache/gatsby-browser-entry.js + 4 modules
+var gatsby_browser_entry = __webpack_require__(7533);
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useSiteConfiguration.tsx
+function useSiteConfiguration(){const data=(0,gatsby_browser_entry.useStaticQuery)(query);return data.allSettingsJson.settings[0].siteConfiguration;}const query="1094019748";
+// EXTERNAL MODULE: ./node_modules/react-helmet/es/Helmet.js
+var Helmet = __webpack_require__(4593);
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/Logo/style.module.css
+// Exports
+var Logo = "style-module--Logo--xzURL";
+
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/Logo/index.tsx
+function Logo_Logo(props){const siteConfiguration=useSiteConfiguration();const fontSize=props.fontSize||'2rem';const color=props.color||'var(--primary-color)';return/*#__PURE__*/index_js_default().createElement("div",{className:Logo,"aria-roledescription":"logo",style:{fontSize,color}},siteConfiguration.logo.text);}
+// EXTERNAL MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/Animation/index.tsx + 2 modules
+var Animation = __webpack_require__(283);
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/SplashScreen/style.module.css
+// Exports
+var SplashScreen = "style-module--SplashScreen--vXOkg";
+var LogoWrapper = "style-module--LogoWrapper--BA0Hc";
+var Backdrop = "style-module--Backdrop--IqgMA";
+
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/SplashScreen/index.tsx
+function SplashScreen_SplashScreen(){const[shouldUnmount,setShouldUnmount]=index_js_default().useState(false);const{dispatch}=(0,context/* useGlobalState */.j1)();return/*#__PURE__*/index_js_default().createElement(Animation/* Animation */.f,{className:SplashScreen,type:shouldUnmount===false?'fadeIn':'fadeOut',duration:250,fillMode:"forwards",onAnimationEnd:()=>{if(shouldUnmount)dispatch({type:context/* ActionType.SetSplashScreenDone */.Us.SetSplashScreenDone,value:true});}},/*#__PURE__*/index_js_default().createElement(Helmet.Helmet,{bodyAttributes:{class:'fixed'}}),/*#__PURE__*/index_js_default().createElement("div",{className:LogoWrapper},/*#__PURE__*/index_js_default().createElement(Animation/* Animation */.f,{className:Backdrop,type:"reduceHeight",delay:800,fillMode:"forwards",onAnimationEnd:()=>{// Wait 500ms and start unmounting the splash screen
+setTimeout(()=>{setShouldUnmount(true);},500);}}),/*#__PURE__*/index_js_default().createElement(Logo_Logo,{fontSize:"3rem",color:"var(--background-color)"})));}
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/Footer/style.module.css
 // Exports
 var Footer = "style-module--Footer--pX9BK";
 var ContentWrapper = "style-module--ContentWrapper--6BjK8";
 var Links = "style-module--Links--Lg8lq";
 
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Header/style.module.css":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/Header/style.module.css ***!
-  \********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Blurred": () => (/* binding */ Blurred),
-/* harmony export */   "Burger": () => (/* binding */ Burger),
-/* harmony export */   "ContentWrapper": () => (/* binding */ ContentWrapper),
-/* harmony export */   "CtaButton": () => (/* binding */ CtaButton),
-/* harmony export */   "Header": () => (/* binding */ Header),
-/* harmony export */   "NavLink": () => (/* binding */ NavLink),
-/* harmony export */   "SideBarBackdrop": () => (/* binding */ SideBarBackdrop),
-/* harmony export */   "SideBarWrapper": () => (/* binding */ SideBarWrapper),
-/* harmony export */   "SideNavigationBar": () => (/* binding */ SideNavigationBar),
-/* harmony export */   "TopNavigationBar": () => (/* binding */ TopNavigationBar)
-/* harmony export */ });
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/Footer/index.tsx
+function Footer_Footer(){const{globalState}=(0,context/* useGlobalState */.j1)();const siteConfiguration=useSiteConfiguration();const darkModeEnabled=globalState.theme===context/* Theme.Dark */.Q2.Dark;return/*#__PURE__*/index_js_default().createElement("footer",{className:Footer,style:{background:darkModeEnabled?'var(--background-color)':'var(--primary-color)',borderTop:darkModeEnabled?'3px solid var(--box-shadow-hover-color)':undefined}},/*#__PURE__*/index_js_default().createElement("div",{className:ContentWrapper},/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.Link,{to:"/","aria-label":"home"},/*#__PURE__*/index_js_default().createElement(Logo_Logo,{fontSize:"1.5rem",color:darkModeEnabled?'var(--primary-color)':'var(--background-color)'})),/*#__PURE__*/index_js_default().createElement("div",{className:Links},siteConfiguration.navigation.footer.map((linkObject,key)=>{return/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.Link,{key:key,to:linkObject.url,"aria-label":linkObject.label,style:{color:darkModeEnabled?'var(--primary-color)':'var(--background-color)'}},linkObject.label);}))));}
+// EXTERNAL MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useMediaQuery.tsx
+var useMediaQuery = __webpack_require__(5426);
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/Header/style.module.css
 // Exports
 var Header = "style-module--Header--mZOzg";
-var ContentWrapper  = "style-module--ContentWrapper --XYxH4";
+var style_module_ContentWrapper  = "style-module--ContentWrapper --XYxH4";
 var Burger = "style-module--Burger--GrdOa";
 var TopNavigationBar = "style-module--TopNavigationBar--V0syT";
 var NavLink = "style-module--NavLink--lBAYL";
@@ -72,1511 +163,120 @@ var SideNavigationBar = "style-module--SideNavigationBar--V6e+O";
 var SideBarBackdrop = "style-module--SideBarBackdrop--+0cBv";
 var Blurred = "style-module--Blurred--8gPkd";
 
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/Header/index.tsx
+function Header_Header(){const[open,setOpen]=index_js_default().useState(false);const siteConfiguration=useSiteConfiguration();const isDesktopBreakpoint=(0,useMediaQuery/* useMediaQuery */.a)('(min-width: 992px)');const navigationItems=/*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment,null,siteConfiguration.navigation.header.map((linkObject,key)=>{return/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.Link,{key:key,to:linkObject.url,className:NavLink,onClick:!isDesktopBreakpoint?()=>setOpen(!open):undefined},linkObject.label);}),/*#__PURE__*/index_js_default().createElement("a",{href:siteConfiguration.navigation.ctaButton.url,target:siteConfiguration.navigation.ctaButton.openNewTab?'_blank':undefined,rel:"noopener noreferrer",className:CtaButton,onClick:!isDesktopBreakpoint?()=>setOpen(!open):undefined},siteConfiguration.navigation.ctaButton.label));const sideNavigationBar=/*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment,null,/*#__PURE__*/index_js_default().createElement("div",{className:Burger,onClick:()=>setOpen(!open)},/*#__PURE__*/index_js_default().createElement("div",{style:open?{transform:'rotate(45deg)'}:undefined}),/*#__PURE__*/index_js_default().createElement("div",{style:open?{transform:'translateX(20px)',opacity:0}:undefined}),/*#__PURE__*/index_js_default().createElement("div",{style:open?{transform:'rotate(-45deg)'}:undefined})),/*#__PURE__*/index_js_default().createElement("div",{className:SideBarWrapper,style:open?{transform:'translateX(0)',visibility:'visible'}:undefined,"aria-hidden":!open,tabIndex:open?1:-1},/*#__PURE__*/index_js_default().createElement("nav",{className:SideNavigationBar},navigationItems)),/*#__PURE__*/index_js_default().createElement("div",{className:SideBarBackdrop,style:open?{display:'block'}:undefined}));const topNavigationBar=/*#__PURE__*/index_js_default().createElement("nav",{className:TopNavigationBar},navigationItems);return/*#__PURE__*/index_js_default().createElement("header",{className:Header},/*#__PURE__*/index_js_default().createElement(Helmet.Helmet,{bodyAttributes:{class:open?Blurred:undefined}}),/*#__PURE__*/index_js_default().createElement(Animation/* Animation */.f,{className:style_module_ContentWrapper,type:"fadeDown"},/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.Link,{to:"/","aria-label":"home"},/*#__PURE__*/index_js_default().createElement(Logo_Logo,{fontSize:"2rem",color:"var(--primary-color"})),isDesktopBreakpoint?topNavigationBar:sideNavigationBar));}
+// EXTERNAL MODULE: ./node_modules/react-cookie-consent/build/index.js
+var build = __webpack_require__(2491);
+var build_default = /*#__PURE__*/__webpack_require__.n(build);
+// EXTERNAL MODULE: ./node_modules/gatsby-plugin-gdpr-cookies/index.js
+var gatsby_plugin_gdpr_cookies = __webpack_require__(9024);
+// EXTERNAL MODULE: ./node_modules/@gatsbyjs/reach-router/es/index.js + 2 modules
+var es = __webpack_require__(3631);
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/CookieBar/style.module.css
+// Exports
+var CookieBar = "style-module--CookieBar--kxAGJ";
 
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Layout/style.module.css":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/Layout/style.module.css ***!
-  \********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Layout": () => (/* binding */ Layout)
-/* harmony export */ });
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/CookieBar/index.tsx
+// Uses the class names from the original package
+function CookieBar_CookieBar(){const location=(0,es.useLocation)();return/*#__PURE__*/index_js_default().createElement(Animation/* Animation */.f,{className:CookieBar,type:"fadeUp",delay:1000},/*#__PURE__*/index_js_default().createElement((build_default()),{cookieName:"gatsby-gdpr-google-analytics",buttonId:"confirm",buttonText:"Accept",declineButtonId:"decline",declineButtonText:"Decline",enableDeclineButton:true,disableStyles:true,onAccept:()=>(0,gatsby_plugin_gdpr_cookies/* initializeAndTrack */.v)(location)},/*#__PURE__*/index_js_default().createElement("p",null,"This website uses cookies \uD83C\uDF6A ")));}
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/Layout/style.module.css
 // Exports
 var Layout = "style-module--Layout--s6yp3";
 
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/Layout/index.tsx
+function Layout_Layout(props){const{globalState}=(0,context/* useGlobalState */.j1)();const showSplashScreen=props.useSplashScreenAnimation&&!globalState.splashScreenDone;const darkModeEnabled=globalState.theme===context/* Theme.Dark */.Q2.Dark;const splashScreenView=/*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment,null,/*#__PURE__*/index_js_default().createElement(Helmet.Helmet,{bodyAttributes:{'data-theme':context/* Theme.Light */.Q2.Light}}),/*#__PURE__*/index_js_default().createElement(SplashScreen_SplashScreen,null));const layoutView=/*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment,null,/*#__PURE__*/index_js_default().createElement(Helmet.Helmet,{bodyAttributes:{'data-theme':darkModeEnabled?context/* Theme.Dark */.Q2.Dark:context/* Theme.Light */.Q2.Light}}),/*#__PURE__*/index_js_default().createElement("div",{className:Layout},/*#__PURE__*/index_js_default().createElement(Header_Header,null),/*#__PURE__*/index_js_default().createElement("main",null,props.children),/*#__PURE__*/index_js_default().createElement(Footer_Footer,null),props.useCookieBar&&/*#__PURE__*/index_js_default().createElement(CookieBar_CookieBar,null)));return showSplashScreen?splashScreenView:layoutView;}
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/Page/index.tsx
+function Page(props){const siteConfiguration=useSiteConfiguration();return/*#__PURE__*/index_js_default().createElement(context/* GlobalStateProvider */.MC,{defaultTheme:siteConfiguration.featureToggles.useDarkModeAsDefault?context/* Theme.Dark */.Q2.Dark:context/* Theme.Light */.Q2.Light,useDarkModeBasedOnUsersPreference:siteConfiguration.featureToggles.useDarkModeBasedOnUsersPreference,useSplashScreenAnimation:props.useSplashScreenAnimation||false},/*#__PURE__*/index_js_default().createElement(Layout_Layout,{useSplashScreenAnimation:props.useSplashScreenAnimation||false,useCookieBar:siteConfiguration.featureToggles.useCookieBar},props.children));}
 
 /***/ }),
 
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Logo/style.module.css":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/Logo/style.module.css ***!
-  \******************************************************************************************/
+/***/ 6913:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Logo": () => (/* binding */ Logo)
-/* harmony export */ });
-// Exports
-var Logo = "style-module--Logo--xzURL";
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "$": () => (/* binding */ Section_Section)
+});
 
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Section/style.module.css":
-/*!*********************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/Section/style.module.css ***!
-  \*********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ContentWrapper": () => (/* binding */ ContentWrapper),
-/* harmony export */   "Heading": () => (/* binding */ Heading),
-/* harmony export */   "Section": () => (/* binding */ Section)
-/* harmony export */ });
+// EXTERNAL MODULE: external "/Users/ridwantukale/Documents/code/ridwan_site/node_modules/react/index.js"
+var index_js_ = __webpack_require__(8005);
+var index_js_default = /*#__PURE__*/__webpack_require__.n(index_js_);
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/Section/style.module.css
 // Exports
 var Section = "style-module--Section--HYcY6";
 var Heading = "style-module--Heading--LAAvY";
 var ContentWrapper  = "style-module--ContentWrapper --Nt3lH";
 
+;// CONCATENATED MODULE: ./node_modules/gatsby-theme-portfolio-minimal/src/components/Section/index.tsx
+function Section_Section(props){let classList;if(props.additionalClasses){classList=props.additionalClasses.concat(ContentWrapper).join(' ');}else{classList=ContentWrapper;}return/*#__PURE__*/index_js_default().createElement("section",{id:props.anchor,className:Section},/*#__PURE__*/index_js_default().createElement("div",{className:classList},props.heading&&/*#__PURE__*/index_js_default().createElement("h3",{className:Heading},props.heading),props.children));}
 
 /***/ }),
 
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/SplashScreen/style.module.css":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/SplashScreen/style.module.css ***!
-  \**************************************************************************************************/
+/***/ 7102:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Backdrop": () => (/* binding */ Backdrop),
-/* harmony export */   "LogoWrapper": () => (/* binding */ LogoWrapper),
-/* harmony export */   "SplashScreen": () => (/* binding */ SplashScreen)
+/* harmony export */   "p": () => (/* binding */ Seo)
 /* harmony export */ });
-// Exports
-var SplashScreen = "style-module--SplashScreen--vXOkg";
-var LogoWrapper = "style-module--LogoWrapper--BA0Hc";
-var Backdrop = "style-module--Backdrop--IqgMA";
-
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-gdpr-cookies/helper.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/gatsby-plugin-gdpr-cookies/helper.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-exports.validGATrackingId = function (options) {
-  return options.trackingId && options.trackingId.trim() !== "";
-};
-
-exports.validGTMTrackingId = function (options) {
-  return options.trackingId && options.trackingId.trim() !== "";
-};
-
-exports.validFbPixelId = function (options) {
-  return options.pixelId && options.pixelId.trim() !== "";
-};
-
-exports.validTikTokPixelId = function (options) {
-  return options.pixelId && options.pixelId.trim() !== "";
-};
-
-exports.validHotjarId = function (options) {
-  return options.hjid && options.hjid.trim() !== "" && options.hjsv && options.hjsv.trim() !== "";
-};
-
-exports.validChatwootConfig = function (options) {
-  return options.baseUrl && options.baseUrl.trim() !== "" && options.websiteToken && options.websiteToken.trim() !== "";
-};
-
-exports.validLinkedinTrackingId = function (options) {
-  return options.trackingId && options.trackingId.trim() !== "";
-};
-
-exports.getCookie = function (name) {
-  var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-  return v ? v[2] : null;
-};
-
-exports.isEnvironmentValid = function (environments) {
-  var currentEnvironment = ({}).ENV || "development" || 0;
-  return environments.includes(currentEnvironment);
-};
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-gdpr-cookies/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/gatsby-plugin-gdpr-cookies/index.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var _require = __webpack_require__(/*! ./services */ "./node_modules/gatsby-plugin-gdpr-cookies/services/index.js"),
-    initializeAndTrackGoogleAnalytics = _require.initializeAndTrackGoogleAnalytics,
-    initializeAndTrackGoogleTagManager = _require.initializeAndTrackGoogleTagManager,
-    initializeAndTrackFacebookPixel = _require.initializeAndTrackFacebookPixel,
-    initializeAndTrackTikTokPixel = _require.initializeAndTrackTikTokPixel,
-    initializeAndTrackHotjar = _require.initializeAndTrackHotjar,
-    initializeChatwoot = _require.initializeChatwoot,
-    initializeLinkedin = _require.initializeLinkedin;
-
-var _require2 = __webpack_require__(/*! ./helper */ "./node_modules/gatsby-plugin-gdpr-cookies/helper.js"),
-    isEnvironmentValid = _require2.isEnvironmentValid;
-
-exports.initializeAndTrack = function (location) {
-  var options = window.gatsbyPluginGDPRCookiesOptions;
-
-  if (isEnvironmentValid(options.environments)) {
-    if (location === undefined || location === null) {
-      console.error('Please provide a reach router location to the initializeAndTrack function.');
-    } else {
-      initializeAndTrackGoogleAnalytics(options.googleAnalytics, location);
-      initializeAndTrackGoogleTagManager(options.googleTagManager, location);
-      initializeAndTrackFacebookPixel(options.facebookPixel);
-      initializeAndTrackTikTokPixel(options.tikTokPixel);
-      initializeAndTrackHotjar(options.hotjar);
-      initializeChatwoot(options.chatwoot);
-      initializeLinkedin(options.linkedin);
-    }
-  }
-};
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-gdpr-cookies/services/chatwoot.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/gatsby-plugin-gdpr-cookies/services/chatwoot.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var _require = __webpack_require__(/*! ../helper */ "./node_modules/gatsby-plugin-gdpr-cookies/helper.js"),
-    validChatwootConfig = _require.validChatwootConfig,
-    getCookie = _require.getCookie;
-
-exports.addChatwoot = function (options) {
-  return new Promise(function (resolve, reject) {
-    if (window.gatsbyPluginGDPRCookiesChatwootAdded) return resolve(true);
-    /* eslint-disable */
-
-    !function (d, t) {
-      var BASE_URL = options.baseUrl;
-      var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      g.src = BASE_URL + "/packs/js/sdk.js";
-      g.defer = true;
-      g.async = true;
-      s.parentNode.insertBefore(g, s);
-
-      g.onload = function () {
-        window.chatwootSDK.run({
-          websiteToken: options.websiteToken,
-          baseUrl: BASE_URL
-        });
-      };
-    }(document, "script");
-    /* eslint-enable */
-
-    window.gatsbyPluginGDPRCookiesChatwootAdded = true;
-    resolve(true);
-  });
-};
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-gdpr-cookies/services/facebook.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/gatsby-plugin-gdpr-cookies/services/facebook.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var _require = __webpack_require__(/*! ../helper */ "./node_modules/gatsby-plugin-gdpr-cookies/helper.js"),
-    validFbPixelId = _require.validFbPixelId,
-    getCookie = _require.getCookie;
-
-exports.addFacebookPixel = function () {
-  return new Promise(function (resolve, reject) {
-    if (window.gatsbyPluginGDPRCookiesFacebookPixelAdded) return resolve(true);
-    /* eslint-disable */
-
-    !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-
-      n = f.fbq = function () {
-        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-      };
-
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s);
-    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    /* eslint-enable */
-
-    window.gatsbyPluginGDPRCookiesFacebookPixelAdded = true;
-    resolve(true);
-  });
-};
-
-exports.initializeFacebookPixel = function (options) {
-  if (!window.gatsbyPluginGDPRCookiesFacebookPixelInitialized && getCookie(options.cookieName) === "true" && validFbPixelId(options)) {
-    window.fbq("init", options.pixelId);
-    window.gatsbyPluginGDPRCookiesFacebookPixelInitialized = true;
-  }
-};
-
-exports.trackFacebookPixel = function (options) {
-  if (getCookie(options.cookieName) === "true" && validFbPixelId(options) && typeof window.fbq === "function") {
-    window.fbq("track", "PageView");
-  }
-};
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-gdpr-cookies/services/google-analytics.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/gatsby-plugin-gdpr-cookies/services/google-analytics.js ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var _require = __webpack_require__(/*! ../helper */ "./node_modules/gatsby-plugin-gdpr-cookies/helper.js"),
-    validGATrackingId = _require.validGATrackingId,
-    getCookie = _require.getCookie;
-
-exports.addGoogleAnalytics = function (_ref) {
-  var trackingId = _ref.trackingId;
-  return new Promise(function (resolve, reject) {
-    if (window.gatsbyPluginGDPRCookiesGoogleAnalyticsAdded) return resolve(true);
-    var head = document.getElementsByTagName('head')[0];
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-
-    script.onload = function () {
-      window.gatsbyPluginGDPRCookiesGoogleAnalyticsAdded = true;
-      resolve(true);
-    };
-
-    script.src = "https://www.googletagmanager.com/gtag/js?id=" + trackingId;
-    head.appendChild(script);
-  });
-};
-
-exports.initializeGoogleAnalytics = function (options) {
-  if (!window.gatsbyPluginGDPRCookiesGoogleAnalyticsInitialized && getCookie(options.cookieName) === "true" && validGATrackingId(options)) {
-    window.dataLayer = window.dataLayer || [];
-
-    window.gtag = function () {
-      window.dataLayer.push(arguments);
-    };
-
-    window.gtag('js', new Date());
-    var gaAnonymize = options.anonymize;
-    var gaAllowAdFeatures = options.allowAdFeatures;
-    gaAnonymize = gaAnonymize !== undefined ? gaAnonymize : true;
-    gaAllowAdFeatures = gaAllowAdFeatures !== undefined ? gaAllowAdFeatures : true;
-    window.gtag('config', options.trackingId, {
-      'anonymize_ip': gaAnonymize,
-      'allow_google_signals': gaAllowAdFeatures
-    });
-    window.gatsbyPluginGDPRCookiesGoogleAnalyticsInitialized = true;
-  }
-};
-
-exports.trackGoogleAnalytics = function (options, location) {
-  if (getCookie(options.cookieName) === "true" && validGATrackingId(options) && typeof window.gtag === "function") {
-    var pagePath = location ? location.pathname + location.search + location.hash : undefined;
-    window.gtag("event", "page_view", {
-      page_path: pagePath
-    });
-  }
-};
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-gdpr-cookies/services/google-tag-manager.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/gatsby-plugin-gdpr-cookies/services/google-tag-manager.js ***!
-  \********************************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var _require = __webpack_require__(/*! ../helper */ "./node_modules/gatsby-plugin-gdpr-cookies/helper.js"),
-    validGTMTrackingId = _require.validGTMTrackingId,
-    getCookie = _require.getCookie;
-
-exports.addGoogleTagManager = function (_ref, environmentParamStr) {
-  var trackingId = _ref.trackingId,
-      dataLayerName = _ref.dataLayerName;
-  return new Promise(function (resolve, reject) {
-    if (window.gatsbyPluginGDPRCookiesGoogleTagManagerAdded) return resolve(true);
-    /* eslint-disable */
-
-    !function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        "gtm.start": new Date().getTime(),
-        event: "gtm.js"
-      });
-      var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl + environmentParamStr;
-      f.parentNode.insertBefore(j, f);
-    }(window, document, "script", dataLayerName, trackingId);
-    /* eslint-enable */
-
-    var iframe = document.createElement("iframe");
-    iframe.key = "gatsby-plugin-gdpr-cookies-google-tagmanager-iframe";
-    iframe.src = "https://www.googletagmanager.com/ns.html?id=" + trackingId + environmentParamStr;
-    iframe.height = 0;
-    iframe.width = 0;
-    iframe.style = "display: none; visibility: hidden";
-    document.body.insertBefore(iframe, document.body.firstChild);
-    window.gatsbyPluginGDPRCookiesGoogleTagManagerAdded = true;
-    resolve(true);
-  });
-};
-
-exports.initializeGoogleTagManager = function (options) {
-  // console.log(`initing tag manager`)
-  if (!window.gatsbyPluginGDPRCookiesGoogleTagManagerInitialized && getCookie(options.cookieName) === "true" && validGTMTrackingId(options)) {
-    window.dataLayer = window.dataLayer || [];
-
-    window.gtag = function () {
-      window.dataLayer.push(arguments);
-    };
-
-    window.gtag("js", new Date());
-    var gaAnonymize = options.anonymize;
-    var gaAllowAdFeatures = options.allowAdFeatures;
-    gaAnonymize = gaAnonymize !== undefined ? gaAnonymize : true;
-    gaAllowAdFeatures = gaAllowAdFeatures !== undefined ? gaAllowAdFeatures : true;
-    window.gtag("config", options.trackingId, {
-      anonymize_ip: gaAnonymize,
-      allow_google_signals: gaAllowAdFeatures
-    });
-  }
-};
-
-exports.trackGoogleTagManager = function (options, location) {
-  // console.log(`tracking tag manager`)
-  if (getCookie(options.cookieName) === "true" && validGTMTrackingId(options) && typeof window.gtag === "function") {
-    var pagePath = location ? location.pathname + location.search + location.hash : undefined;
-    window.gtag("event", "page_view", {
-      page_path: pagePath
-    });
-  }
-
-  setTimeout(function () {
-    var data = options.dataLayerName ? window[options.dataLayerName] : window.dataLayer;
-
-    if (typeof data === "object") {
-      var eventName = options.routeChangeEvent || "gatsbyRouteChange";
-      data.push({
-        event: eventName
-      });
-    }
-  }, 50);
-};
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-gdpr-cookies/services/hotjar.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/gatsby-plugin-gdpr-cookies/services/hotjar.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var _require = __webpack_require__(/*! ../helper */ "./node_modules/gatsby-plugin-gdpr-cookies/helper.js"),
-    validHotjarId = _require.validHotjarId,
-    getCookie = _require.getCookie;
-
-exports.addHotjar = function (options) {
-  return new Promise(function (resolve, reject) {
-    if (window.gatsbyPluginGDPRCookiesHotjarAdded) return resolve(true);
-    /* eslint-disable */
-
-    !function (h, o, t, j, a, r) {
-      h.hj = h.hj || function () {
-        (h.hj.q = h.hj.q || []).push(arguments);
-      };
-
-      h._hjSettings = {
-        hjid: options.hjid,
-        hjsv: options.hjsv
-      };
-      a = o.getElementsByTagName('head')[0];
-      r = o.createElement('script');
-      r.async = 1;
-      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-      a.appendChild(r);
-    }(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-    /* eslint-enable */
-
-    window.gatsbyPluginGDPRCookiesHotjarAdded = true;
-    resolve(true);
-  });
-};
-
-exports.initializeHotjar = function (options) {
-  if (!window.gatsbyPluginGDPRCookiesHotjarInitialized && getCookie(options.cookieName) === "true" && validHotjarId(options)) {
-    window.gatsbyPluginGDPRCookiesHotjarInitialized = true;
-  }
-};
-
-exports.trackHotjar = function (options) {// this is supposed to so nothing
-};
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-gdpr-cookies/services/index.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/gatsby-plugin-gdpr-cookies/services/index.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var _require = __webpack_require__(/*! ../helper */ "./node_modules/gatsby-plugin-gdpr-cookies/helper.js"),
-    validGATrackingId = _require.validGATrackingId,
-    validGTMTrackingId = _require.validGTMTrackingId,
-    validFbPixelId = _require.validFbPixelId,
-    validTikTokPixelId = _require.validTikTokPixelId,
-    validHotjarId = _require.validHotjarId,
-    validChatwootConfig = _require.validChatwootConfig,
-    validLinkedinTrackingId = _require.validLinkedinTrackingId,
-    getCookie = _require.getCookie;
-
-var _require2 = __webpack_require__(/*! ./google-analytics */ "./node_modules/gatsby-plugin-gdpr-cookies/services/google-analytics.js"),
-    addGoogleAnalytics = _require2.addGoogleAnalytics,
-    initializeGoogleAnalytics = _require2.initializeGoogleAnalytics,
-    trackGoogleAnalytics = _require2.trackGoogleAnalytics;
-
-var _require3 = __webpack_require__(/*! ./google-tag-manager */ "./node_modules/gatsby-plugin-gdpr-cookies/services/google-tag-manager.js"),
-    addGoogleTagManager = _require3.addGoogleTagManager,
-    initializeGoogleTagManager = _require3.initializeGoogleTagManager,
-    trackGoogleTagManager = _require3.trackGoogleTagManager;
-
-var _require4 = __webpack_require__(/*! ./facebook */ "./node_modules/gatsby-plugin-gdpr-cookies/services/facebook.js"),
-    addFacebookPixel = _require4.addFacebookPixel,
-    initializeFacebookPixel = _require4.initializeFacebookPixel,
-    trackFacebookPixel = _require4.trackFacebookPixel;
-
-var _require5 = __webpack_require__(/*! ./tiktok */ "./node_modules/gatsby-plugin-gdpr-cookies/services/tiktok.js"),
-    addTikTokPixel = _require5.addTikTokPixel,
-    initializeTikTokPixel = _require5.initializeTikTokPixel,
-    trackTikTokPixel = _require5.trackTikTokPixel;
-
-var _require6 = __webpack_require__(/*! ./hotjar */ "./node_modules/gatsby-plugin-gdpr-cookies/services/hotjar.js"),
-    addHotjar = _require6.addHotjar,
-    initializeHotjar = _require6.initializeHotjar,
-    trackHotjar = _require6.trackHotjar;
-
-var _require7 = __webpack_require__(/*! ./chatwoot */ "./node_modules/gatsby-plugin-gdpr-cookies/services/chatwoot.js"),
-    addChatwoot = _require7.addChatwoot;
-
-var _require8 = __webpack_require__(/*! ./linkedin */ "./node_modules/gatsby-plugin-gdpr-cookies/services/linkedin.js"),
-    addLinkedin = _require8.addLinkedin,
-    initializeLinkedin = _require8.initializeLinkedin;
-
-exports.initializeAndTrackGoogleAnalytics = function (options, location) {
-  if (getCookie(options.cookieName) === "true" && validGATrackingId(options)) {
-    addGoogleAnalytics(options).then(function (status) {
-      if (status) {
-        initializeGoogleAnalytics(options);
-        trackGoogleAnalytics(options, location);
-      }
-    });
-  }
-};
-
-exports.initializeAndTrackGoogleTagManager = function (options, location) {
-  if (getCookie(options.cookieName) === "true" && validGTMTrackingId(options)) {
-    var environmentParamStr = "";
-
-    if (options.gtmAuth && options.gtmPreview) {
-      environmentParamStr = "&gtm_auth=" + options.gtmAuth + "&gtm_preview=" + options.gtmPreview + "&gtm_cookies_win=x";
-    }
-
-    addGoogleTagManager(options, environmentParamStr).then(function (status) {
-      if (status) {
-        initializeGoogleTagManager(options);
-        trackGoogleTagManager(options, location);
-      }
-    });
-  }
-};
-
-exports.initializeAndTrackFacebookPixel = function (options) {
-  if (getCookie(options.cookieName) === "true" && validFbPixelId(options)) {
-    addFacebookPixel().then(function (status) {
-      if (status) {
-        initializeFacebookPixel(options);
-        trackFacebookPixel(options);
-      }
-    });
-  }
-};
-
-exports.initializeAndTrackTikTokPixel = function (options) {
-  if (getCookie(options.cookieName) === "true" && validTikTokPixelId(options)) {
-    addTikTokPixel().then(function (status) {
-      if (status) {
-        initializeTikTokPixel(options);
-        trackTikTokPixel(options);
-      }
-    });
-  }
-};
-
-exports.initializeAndTrackHotjar = function (options) {
-  if (getCookie(options.cookieName) === "true" && validHotjarId(options)) {
-    addHotjar(options).then(function (status) {
-      if (status) {
-        initializeHotjar(options);
-        trackHotjar(options);
-      }
-    });
-  }
-};
-
-exports.initializeLinkedin = function (options) {
-  if (getCookie(options.cookieName) === "true" && validLinkedinTrackingId(options)) {
-    addLinkedin(options).then(function (status) {
-      if (status) {
-        initializeLinkedin(options);
-      }
-    });
-  }
-};
-
-exports.initializeChatwoot = function (options) {
-  if (getCookie(options.cookieName) === "true" && validChatwootConfig(options)) {
-    addChatwoot(options).then(function (status) {
-      if (status) {
-        console.info('Chat is added and running');
-      }
-    });
-  }
-};
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-gdpr-cookies/services/linkedin.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/gatsby-plugin-gdpr-cookies/services/linkedin.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var _require = __webpack_require__(/*! ../helper */ "./node_modules/gatsby-plugin-gdpr-cookies/helper.js"),
-    validLinkedinTrackingId = _require.validLinkedinTrackingId,
-    getCookie = _require.getCookie;
-
-exports.addLinkedin = function (options) {
-  return new Promise(function (resolve, reject) {
-    if (window.gatsbyPluginGDPRCookiesLinkedinAdded) return resolve(true);
-    /* eslint-disable */
-    // LINKED IN SPECIFIC CODE HERE
-
-    _linkedin_partner_id = options.trackingId;
-    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-
-    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-    /* eslint-enable */
-
-
-    window.gatsbyPluginGDPRCookiesLinkedinAdded = true;
-    resolve(true);
-  });
-};
-
-exports.initializeLinkedin = function (options) {
-  if (!window.gatsbyPluginGDPRCookiesLinkedinInitialized && getCookie(options.cookieName) === "true" && validLinkedinTrackingId(options)) {
-    // (function(){
-    var s = document.getElementsByTagName("script")[0];
-    var b = document.createElement("script");
-    b.type = "text/javascript";
-    b.async = true;
-    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-    s.parentNode.insertBefore(b, s); // })();
-
-    window.gatsbyPluginGDPRCookiesLinkedinInitialized = true;
-  }
-};
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-gdpr-cookies/services/tiktok.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/gatsby-plugin-gdpr-cookies/services/tiktok.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var _require = __webpack_require__(/*! ../helper */ "./node_modules/gatsby-plugin-gdpr-cookies/helper.js"),
-    validTikTokPixelId = _require.validTikTokPixelId,
-    getCookie = _require.getCookie;
-
-exports.addTikTokPixel = function () {
-  return new Promise(function (resolve, reject) {
-    if (window.gatsbyPluginGDPRCookiesTikTokPixelAdded) return resolve(true);
-    /* eslint-disable */
-
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject = t;
-      var ttq = w[t] = w[t] || [];
-      ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function (t, e) {
-        t[e] = function () {
-          t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
-        };
-      };
-
-      for (var i = 0; i < ttq.methods.length; i++) {
-        ttq.setAndDefer(ttq, ttq.methods[i]);
-      }
-
-      ttq.instance = function (t) {
-        for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) {
-          ttq.setAndDefer(e, ttq.methods[n]);
-        }
-
-        return e;
-      }, ttq.load = function (e, n) {
-        var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
-        ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date(), ttq._o = ttq._o || {}, ttq._o[e] = n || {};
-        n = document.createElement("script");
-        n.type = "text/javascript", n.async = !0, n.src = i + "?sdkid=" + e + "&lib=" + t;
-        e = document.getElementsByTagName("script")[0];
-        e.parentNode.insertBefore(n, e);
-      };
-    }(window, document, 'ttq');
-    /* eslint-enable */
-
-    window.gatsbyPluginGDPRCookiesTikTokPixelAdded = true;
-    resolve(true);
-  });
-};
-
-exports.initializeTikTokPixel = function (options) {
-  if (!window.gatsbyPluginGDPRCookiesTikTokPixelInitialized && getCookie(options.cookieName) === "true" && validTikTokPixelId(options)) {
-    window.ttq.load(options.pixelId);
-    window.gatsbyPluginGDPRCookiesTikTokPixelInitialized = true;
-  }
-};
-
-exports.trackTikTokPixel = function (options) {
-  if (getCookie(options.cookieName) === "true" && validTikTokPixelId(options) && typeof window.fbq === "function") {
-    window.fbq("track", "PageView");
-    window.ttq.page();
-  }
-};
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Animation/index.tsx":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/Animation/index.tsx ***!
-  \****************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Animation": () => (/* binding */ Animation)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8005);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _hooks_useCastedRef__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../hooks/useCastedRef */ "./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useCastedRef.tsx");
-/* harmony import */ var _hooks_useOnScreen__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../hooks/useOnScreen */ "./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useOnScreen.tsx");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Animation/style.css");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-function Animation(props) {
-  var _props$type, _props$timing, _props$duration, _props$delay, _props$iterationCount, _props$fillMode;
-
-  const ref = (0,_hooks_useCastedRef__WEBPACK_IMPORTED_MODULE_1__.useCastedRef)();
-  const onScreen = (0,_hooks_useOnScreen__WEBPACK_IMPORTED_MODULE_2__.useOnScreen)(ref); // Set defaults
-
-  const type = (_props$type = props.type) !== null && _props$type !== void 0 ? _props$type : 'fadeIn';
-  const timing = (_props$timing = props.timing) !== null && _props$timing !== void 0 ? _props$timing : 'ease-out';
-  const duration = (_props$duration = props.duration) !== null && _props$duration !== void 0 ? _props$duration : 200;
-  const delay = (_props$delay = props.delay) !== null && _props$delay !== void 0 ? _props$delay : 0;
-  const count = (_props$iterationCount = props.iterationCount) !== null && _props$iterationCount !== void 0 ? _props$iterationCount : 1;
-  const fillMode = (_props$fillMode = props.fillMode) !== null && _props$fillMode !== void 0 ? _props$fillMode : 'backwards';
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    ref: ref,
-    className: props.className,
-    onAnimationEnd: props.onAnimationEnd,
-    style: onScreen ? { ...props.style,
-      animationName: `${type}`,
-      animationTimingFunction: `${timing}`,
-      animationDuration: `${duration}ms`,
-      animationDelay: `${delay}ms`,
-      animationIterationCount: `${count}`,
-      animationFillMode: `${fillMode}`
-    } : { ...props.style,
-      opacity: 0
-    }
-  }, props.children);
-}
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4593);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3631);
+/* harmony import */ var _hooks_useSiteMetadata__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3643);
+function Seo(props){const location=(0,_reach_router__WEBPACK_IMPORTED_MODULE_2__.useLocation)();const siteMetadata={...(0,_hooks_useSiteMetadata__WEBPACK_IMPORTED_MODULE_3__/* .useSiteMetadata */ .$)(),...props};const thumbnailUrl=siteMetadata.thumbnail?(siteMetadata.siteUrl+siteMetadata.thumbnail.childImageSharp.original.src).replace(/([^:]\/)\/+/g,'$1'):undefined;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_1__.Helmet,{title:siteMetadata.title,titleTemplate:props.useTitleTemplate?siteMetadata.titleTemplate:undefined,htmlAttributes:{lang:siteMetadata.language}},props.noIndex&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta",{name:"robots",content:"noindex"}),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta",{name:"description",content:siteMetadata.description}),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta",{property:"og:title",content:siteMetadata.title}),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta",{property:"og:site_name",content:siteMetadata.title}),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta",{property:"og:url",content:siteMetadata.siteUrl+location.pathname}),thumbnailUrl&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta",{property:"og:image",content:thumbnailUrl}),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta",{property:"og:description",content:siteMetadata.description}),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta",{property:"og:type",content:"website"}),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta",{property:"twitter:card",content:"summary"}),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta",{property:"twitter:creator",content:siteMetadata.author}),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta",{property:"twitter:title",content:siteMetadata.title}),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta",{property:"twitter:description",content:siteMetadata.description}));}
 
 /***/ }),
 
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/CookieBar/index.tsx":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/CookieBar/index.tsx ***!
-  \****************************************************************************************/
+/***/ 215:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CookieBar": () => (/* binding */ CookieBar)
+/* harmony export */   "MC": () => (/* binding */ GlobalStateProvider),
+/* harmony export */   "Q2": () => (/* binding */ Theme),
+/* harmony export */   "Us": () => (/* binding */ ActionType),
+/* harmony export */   "j1": () => (/* binding */ useGlobalState)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8005);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_cookie_consent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-cookie-consent */ "./node_modules/react-cookie-consent/build/index.js");
-/* harmony import */ var react_cookie_consent__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_cookie_consent__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var gatsby_plugin_gdpr_cookies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-plugin-gdpr-cookies */ "./node_modules/gatsby-plugin-gdpr-cookies/index.js");
-/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @reach/router */ "./node_modules/@gatsbyjs/reach-router/es/index.js");
-/* harmony import */ var _Animation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Animation */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Animation/index.tsx");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.css */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/CookieBar/style.css");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _style_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.module.css */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/CookieBar/style.module.css");
-
-
-
-
-
- // Uses the class names from the original package
-
-
-function CookieBar() {
-  const location = (0,_reach_router__WEBPACK_IMPORTED_MODULE_3__.useLocation)();
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Animation__WEBPACK_IMPORTED_MODULE_4__.Animation, {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_6__.CookieBar,
-    type: "fadeUp",
-    delay: 1000
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react_cookie_consent__WEBPACK_IMPORTED_MODULE_1___default()), {
-    cookieName: "gatsby-gdpr-google-analytics",
-    buttonId: "confirm",
-    buttonText: "Accept",
-    declineButtonId: "decline",
-    declineButtonText: "Decline",
-    enableDeclineButton: true,
-    disableStyles: true,
-    onAccept: () => (0,gatsby_plugin_gdpr_cookies__WEBPACK_IMPORTED_MODULE_2__.initializeAndTrack)(location)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "This website uses cookies \uD83C\uDF6A ")));
-}
+/* harmony import */ var _hooks_useMediaQuery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5426);
+let Theme;(function(Theme){Theme["Light"]="lightTheme";Theme["Dark"]="darkTheme";})(Theme||(Theme={}));let ActionType;(function(ActionType){ActionType["SetTheme"]="SET_THEME";ActionType["SetSplashScreenDone"]="SET_SPLASH_SCREEN_DONE";})(ActionType||(ActionType={}));const GlobalStateContext=/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createContext(undefined);function GlobalStateProvider(props){const[globalState,dispatch]=react__WEBPACK_IMPORTED_MODULE_0___default().useReducer(globalStateReducer,{theme:initializeTheme(props.defaultTheme,props.useDarkModeBasedOnUsersPreference),// If useSplashScreenAnimation=false, we skip the animation by setting the initial value to true
+splashScreenDone:props.useSplashScreenAnimation?false:true});return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(GlobalStateContext.Provider,{value:{globalState,dispatch}},props.children);}function useGlobalState(){const context=react__WEBPACK_IMPORTED_MODULE_0___default().useContext(GlobalStateContext);if(context===undefined){throw new Error('useGlobalState must be used within a GlobalStateProvider');}return context;}function globalStateReducer(state,action){switch(action.type){case ActionType.SetTheme:{return{...state,theme:action.value};}case ActionType.SetSplashScreenDone:{return{...state,splashScreenDone:action.value};}default:{throw new Error(`Unhandled action type`);}}}function initializeTheme(defaultTheme,useDarkMode){const darkModeEnabled=(0,_hooks_useMediaQuery__WEBPACK_IMPORTED_MODULE_1__/* .useMediaQuery */ .a)('(prefers-color-scheme: dark)');let initialTheme=defaultTheme;if(useDarkMode&&darkModeEnabled){initialTheme=Theme.Dark;}return initialTheme;}
 
 /***/ }),
 
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Footer/index.tsx":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/Footer/index.tsx ***!
-  \*************************************************************************************/
+/***/ 5426:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Footer": () => (/* binding */ Footer)
+/* harmony export */   "a": () => (/* binding */ useMediaQuery)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8005);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var _Logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Logo */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Logo/index.tsx");
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../context */ "./node_modules/gatsby-theme-portfolio-minimal/src/context/index.tsx");
-/* harmony import */ var _hooks_useSiteConfiguration__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hooks/useSiteConfiguration */ "./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useSiteConfiguration.tsx");
-/* harmony import */ var _style_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.module.css */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Footer/style.module.css");
-
-
-
-
-
-
-function Footer() {
-  const {
-    globalState
-  } = (0,_context__WEBPACK_IMPORTED_MODULE_3__.useGlobalState)();
-  const siteConfiguration = (0,_hooks_useSiteConfiguration__WEBPACK_IMPORTED_MODULE_4__.useSiteConfiguration)();
-  const darkModeEnabled = globalState.theme === _context__WEBPACK_IMPORTED_MODULE_3__.Theme.Dark;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("footer", {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_5__.Footer,
-    style: {
-      background: darkModeEnabled ? 'var(--background-color)' : 'var(--primary-color)',
-      borderTop: darkModeEnabled ? '3px solid var(--box-shadow-hover-color)' : undefined
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_5__.ContentWrapper
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    to: "/",
-    "aria-label": "home"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Logo__WEBPACK_IMPORTED_MODULE_2__.Logo, {
-    fontSize: "1.5rem",
-    color: darkModeEnabled ? 'var(--primary-color)' : 'var(--background-color)'
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_5__.Links
-  }, siteConfiguration.navigation.footer.map((linkObject, key) => {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-      key: key,
-      to: linkObject.url,
-      "aria-label": linkObject.label,
-      style: {
-        color: darkModeEnabled ? 'var(--primary-color)' : 'var(--background-color)'
-      }
-    }, linkObject.label);
-  }))));
-}
+function useMediaQuery(query){if(typeof window==='undefined'||typeof window.matchMedia==='undefined'){return false;}const mediaQuery=window.matchMedia(query);const[match,setMatch]=react__WEBPACK_IMPORTED_MODULE_0___default().useState(mediaQuery.matches);react__WEBPACK_IMPORTED_MODULE_0___default().useEffect(()=>{function handleMatch(){setMatch(mediaQuery.matches);}if(mediaQuery.addEventListener){mediaQuery.addEventListener('change',handleMatch);return()=>mediaQuery.removeEventListener('change',handleMatch);}else{// backwards compatibility
+// https://betterprogramming.pub/using-window-matchmedia-in-react-8116eada2588
+mediaQuery.addListener(handleMatch);return()=>mediaQuery.removeListener(handleMatch);}},[]);return match;}
 
 /***/ }),
 
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Header/index.tsx":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/Header/index.tsx ***!
-  \*************************************************************************************/
+/***/ 3643:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Header": () => (/* binding */ Header)
+/* harmony export */   "$": () => (/* binding */ useSiteMetadata)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var _Logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Logo */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Logo/index.tsx");
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
-/* harmony import */ var _hooks_useMediaQuery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hooks/useMediaQuery */ "./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useMediaQuery.tsx");
-/* harmony import */ var _hooks_useSiteConfiguration__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../hooks/useSiteConfiguration */ "./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useSiteConfiguration.tsx");
-/* harmony import */ var _Animation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Animation */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Animation/index.tsx");
-/* harmony import */ var _style_module_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.module.css */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Header/style.module.css");
-
-
-
-
-
-
-
-
-function Header() {
-  const [open, setOpen] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(false);
-  const siteConfiguration = (0,_hooks_useSiteConfiguration__WEBPACK_IMPORTED_MODULE_5__.useSiteConfiguration)();
-  const isDesktopBreakpoint = (0,_hooks_useMediaQuery__WEBPACK_IMPORTED_MODULE_4__.useMediaQuery)('(min-width: 992px)');
-  const navigationItems = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, siteConfiguration.navigation.header.map((linkObject, key) => {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-      key: key,
-      to: linkObject.url,
-      className: _style_module_css__WEBPACK_IMPORTED_MODULE_7__.NavLink,
-      onClick: !isDesktopBreakpoint ? () => setOpen(!open) : undefined
-    }, linkObject.label);
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: siteConfiguration.navigation.ctaButton.url,
-    target: siteConfiguration.navigation.ctaButton.openNewTab ? '_blank' : undefined,
-    rel: "noopener noreferrer",
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_7__.CtaButton,
-    onClick: !isDesktopBreakpoint ? () => setOpen(!open) : undefined
-  }, siteConfiguration.navigation.ctaButton.label));
-  const sideNavigationBar = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_7__.Burger,
-    onClick: () => setOpen(!open)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    style: open ? {
-      transform: 'rotate(45deg)'
-    } : undefined
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    style: open ? {
-      transform: 'translateX(20px)',
-      opacity: 0
-    } : undefined
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    style: open ? {
-      transform: 'rotate(-45deg)'
-    } : undefined
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_7__.SideBarWrapper,
-    style: open ? {
-      transform: 'translateX(0)',
-      visibility: 'visible'
-    } : undefined,
-    "aria-hidden": !open,
-    tabIndex: open ? 1 : -1
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_7__.SideNavigationBar
-  }, navigationItems)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_7__.SideBarBackdrop,
-    style: open ? {
-      display: 'block'
-    } : undefined
-  }));
-  const topNavigationBar = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_7__.TopNavigationBar
-  }, navigationItems);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_7__.Header
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_3__.Helmet, {
-    bodyAttributes: {
-      class: open ? _style_module_css__WEBPACK_IMPORTED_MODULE_7__.Blurred : undefined
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Animation__WEBPACK_IMPORTED_MODULE_6__.Animation, {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_7__.ContentWrapper,
-    type: "fadeDown"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    to: "/",
-    "aria-label": "home"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Logo__WEBPACK_IMPORTED_MODULE_2__.Logo, {
-    fontSize: "2rem",
-    color: "var(--primary-color"
-  })), isDesktopBreakpoint ? topNavigationBar : sideNavigationBar));
-}
+/* unused harmony export query */
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7533);
+function useSiteMetadata(){const data=(0,gatsby__WEBPACK_IMPORTED_MODULE_0__.useStaticQuery)(query);return data.allSettingsJson.settings[0].siteMetadata;}const query="36698639";
 
 /***/ }),
 
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Layout/index.tsx":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/Layout/index.tsx ***!
-  \*************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Layout": () => (/* binding */ Layout)
-/* harmony export */ });
-/* harmony import */ var _fontsource_roboto_400_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fontsource/roboto/400.css */ "./node_modules/@fontsource/roboto/400.css");
-/* harmony import */ var _fontsource_roboto_400_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fontsource_roboto_400_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _fontsource_roboto_700_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fontsource/roboto/700.css */ "./node_modules/@fontsource/roboto/700.css");
-/* harmony import */ var _fontsource_roboto_700_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fontsource_roboto_700_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _globalStyles_global_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../globalStyles/global.css */ "./node_modules/gatsby-theme-portfolio-minimal/src/globalStyles/global.css");
-/* harmony import */ var _globalStyles_global_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_globalStyles_global_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _globalStyles_theme_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../globalStyles/theme.css */ "./node_modules/gatsby-theme-portfolio-minimal/src/globalStyles/theme.css");
-/* harmony import */ var _globalStyles_theme_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_globalStyles_theme_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../context */ "./node_modules/gatsby-theme-portfolio-minimal/src/context/index.tsx");
-/* harmony import */ var _SplashScreen__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../SplashScreen */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/SplashScreen/index.tsx");
-/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Footer */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Footer/index.tsx");
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Header */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Header/index.tsx");
-/* harmony import */ var _CookieBar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../CookieBar */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/CookieBar/index.tsx");
-/* harmony import */ var _style_module_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./style.module.css */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Layout/style.module.css");
-
-
-
-
-
-
-
-
-
-
-
-
-function Layout(props) {
-  const {
-    globalState
-  } = (0,_context__WEBPACK_IMPORTED_MODULE_6__.useGlobalState)();
-  const showSplashScreen = props.useSplashScreenAnimation && !globalState.splashScreenDone;
-  const darkModeEnabled = globalState.theme === _context__WEBPACK_IMPORTED_MODULE_6__.Theme.Dark;
-  const splashScreenView = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement((react__WEBPACK_IMPORTED_MODULE_4___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_5__.Helmet, {
-    bodyAttributes: {
-      'data-theme': _context__WEBPACK_IMPORTED_MODULE_6__.Theme.Light
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(_SplashScreen__WEBPACK_IMPORTED_MODULE_7__.SplashScreen, null));
-  const layoutView = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement((react__WEBPACK_IMPORTED_MODULE_4___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_5__.Helmet, {
-    bodyAttributes: {
-      'data-theme': darkModeEnabled ? _context__WEBPACK_IMPORTED_MODULE_6__.Theme.Dark : _context__WEBPACK_IMPORTED_MODULE_6__.Theme.Light
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement("div", {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_11__.Layout
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(_Header__WEBPACK_IMPORTED_MODULE_9__.Header, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement("main", null, props.children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(_Footer__WEBPACK_IMPORTED_MODULE_8__.Footer, null), props.useCookieBar && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(_CookieBar__WEBPACK_IMPORTED_MODULE_10__.CookieBar, null)));
-  return showSplashScreen ? splashScreenView : layoutView;
-}
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Logo/index.tsx":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/Logo/index.tsx ***!
-  \***********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Logo": () => (/* binding */ Logo)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _hooks_useSiteConfiguration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../hooks/useSiteConfiguration */ "./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useSiteConfiguration.tsx");
-/* harmony import */ var _style_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.module.css */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Logo/style.module.css");
-
-
-
-function Logo(props) {
-  const siteConfiguration = (0,_hooks_useSiteConfiguration__WEBPACK_IMPORTED_MODULE_1__.useSiteConfiguration)();
-  const fontSize = props.fontSize || '2rem';
-  const color = props.color || 'var(--primary-color)';
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_2__.Logo,
-    "aria-roledescription": "logo",
-    style: {
-      fontSize,
-      color
-    }
-  }, siteConfiguration.logo.text);
-}
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Page/index.tsx":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/Page/index.tsx ***!
-  \***********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Page": () => (/* binding */ Page)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../context */ "./node_modules/gatsby-theme-portfolio-minimal/src/context/index.tsx");
-/* harmony import */ var _hooks_useSiteConfiguration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../hooks/useSiteConfiguration */ "./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useSiteConfiguration.tsx");
-/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Layout */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Layout/index.tsx");
-
-
-
-
-function Page(props) {
-  const siteConfiguration = (0,_hooks_useSiteConfiguration__WEBPACK_IMPORTED_MODULE_2__.useSiteConfiguration)();
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_context__WEBPACK_IMPORTED_MODULE_1__.GlobalStateProvider, {
-    defaultTheme: siteConfiguration.featureToggles.useDarkModeAsDefault ? _context__WEBPACK_IMPORTED_MODULE_1__.Theme.Dark : _context__WEBPACK_IMPORTED_MODULE_1__.Theme.Light,
-    useDarkModeBasedOnUsersPreference: siteConfiguration.featureToggles.useDarkModeBasedOnUsersPreference,
-    useSplashScreenAnimation: props.useSplashScreenAnimation || false
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Layout__WEBPACK_IMPORTED_MODULE_3__.Layout, {
-    useSplashScreenAnimation: props.useSplashScreenAnimation || false,
-    useCookieBar: siteConfiguration.featureToggles.useCookieBar
-  }, props.children));
-}
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Section/index.tsx":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/Section/index.tsx ***!
-  \**************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Section": () => (/* binding */ Section)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.module.css */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Section/style.module.css");
-
-
-function Section(props) {
-  let classList;
-
-  if (props.additionalClasses) {
-    classList = props.additionalClasses.concat(_style_module_css__WEBPACK_IMPORTED_MODULE_1__.ContentWrapper).join(' ');
-  } else {
-    classList = _style_module_css__WEBPACK_IMPORTED_MODULE_1__.ContentWrapper;
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
-    id: props.anchor,
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_1__.Section
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: classList
-  }, props.heading && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_1__.Heading
-  }, props.heading), props.children));
-}
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Seo/index.tsx":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/Seo/index.tsx ***!
-  \**********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Seo": () => (/* binding */ Seo)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
-/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @reach/router */ "./node_modules/@gatsbyjs/reach-router/es/index.js");
-/* harmony import */ var _hooks_useSiteMetadata__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../hooks/useSiteMetadata */ "./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useSiteMetadata.tsx");
-
-
-
-
-function Seo(props) {
-  const location = (0,_reach_router__WEBPACK_IMPORTED_MODULE_2__.useLocation)();
-  const siteMetadata = { ...(0,_hooks_useSiteMetadata__WEBPACK_IMPORTED_MODULE_3__.useSiteMetadata)(),
-    ...props
-  };
-  const thumbnailUrl = siteMetadata.thumbnail ? (siteMetadata.siteUrl + siteMetadata.thumbnail.childImageSharp.original.src).replace(/([^:]\/)\/+/g, '$1') : undefined;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_1__.Helmet, {
-    title: siteMetadata.title,
-    titleTemplate: props.useTitleTemplate ? siteMetadata.titleTemplate : undefined,
-    htmlAttributes: {
-      lang: siteMetadata.language
-    }
-  }, props.noIndex && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
-    name: "robots",
-    content: "noindex"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
-    name: "description",
-    content: siteMetadata.description
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
-    property: "og:title",
-    content: siteMetadata.title
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
-    property: "og:site_name",
-    content: siteMetadata.title
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
-    property: "og:url",
-    content: siteMetadata.siteUrl + location.pathname
-  }), thumbnailUrl && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
-    property: "og:image",
-    content: thumbnailUrl
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
-    property: "og:description",
-    content: siteMetadata.description
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
-    property: "og:type",
-    content: "website"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
-    property: "twitter:card",
-    content: "summary"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
-    property: "twitter:creator",
-    content: siteMetadata.author
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
-    property: "twitter:title",
-    content: siteMetadata.title
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
-    property: "twitter:description",
-    content: siteMetadata.description
-  }));
-}
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/SplashScreen/index.tsx":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/SplashScreen/index.tsx ***!
-  \*******************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SplashScreen": () => (/* binding */ SplashScreen)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../context */ "./node_modules/gatsby-theme-portfolio-minimal/src/context/index.tsx");
-/* harmony import */ var _Logo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Logo */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Logo/index.tsx");
-/* harmony import */ var _Animation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Animation */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Animation/index.tsx");
-/* harmony import */ var _style_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.module.css */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/SplashScreen/style.module.css");
-
-
-
-
-
-
-function SplashScreen() {
-  const [shouldUnmount, setShouldUnmount] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(false);
-  const {
-    dispatch
-  } = (0,_context__WEBPACK_IMPORTED_MODULE_2__.useGlobalState)();
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Animation__WEBPACK_IMPORTED_MODULE_4__.Animation, {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_5__.SplashScreen,
-    type: shouldUnmount === false ? 'fadeIn' : 'fadeOut',
-    duration: 250,
-    fillMode: "forwards",
-    onAnimationEnd: () => {
-      if (shouldUnmount) dispatch({
-        type: _context__WEBPACK_IMPORTED_MODULE_2__.ActionType.SetSplashScreenDone,
-        value: true
-      });
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_1__.Helmet, {
-    bodyAttributes: {
-      class: 'fixed'
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_5__.LogoWrapper
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Animation__WEBPACK_IMPORTED_MODULE_4__.Animation, {
-    className: _style_module_css__WEBPACK_IMPORTED_MODULE_5__.Backdrop,
-    type: "reduceHeight",
-    delay: 800,
-    fillMode: "forwards",
-    onAnimationEnd: () => {
-      // Wait 500ms and start unmounting the splash screen
-      setTimeout(() => {
-        setShouldUnmount(true);
-      }, 500);
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Logo__WEBPACK_IMPORTED_MODULE_3__.Logo, {
-    fontSize: "3rem",
-    color: "var(--background-color)"
-  })));
-}
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/context/index.tsx":
-/*!***************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/context/index.tsx ***!
-  \***************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ActionType": () => (/* binding */ ActionType),
-/* harmony export */   "GlobalStateProvider": () => (/* binding */ GlobalStateProvider),
-/* harmony export */   "Theme": () => (/* binding */ Theme),
-/* harmony export */   "useGlobalState": () => (/* binding */ useGlobalState)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _hooks_useMediaQuery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hooks/useMediaQuery */ "./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useMediaQuery.tsx");
-
-
-let Theme;
-
-(function (Theme) {
-  Theme["Light"] = "lightTheme";
-  Theme["Dark"] = "darkTheme";
-})(Theme || (Theme = {}));
-
-let ActionType;
-
-(function (ActionType) {
-  ActionType["SetTheme"] = "SET_THEME";
-  ActionType["SetSplashScreenDone"] = "SET_SPLASH_SCREEN_DONE";
-})(ActionType || (ActionType = {}));
-
-const GlobalStateContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createContext(undefined);
-function GlobalStateProvider(props) {
-  const [globalState, dispatch] = react__WEBPACK_IMPORTED_MODULE_0___default().useReducer(globalStateReducer, {
-    theme: initializeTheme(props.defaultTheme, props.useDarkModeBasedOnUsersPreference),
-    // If useSplashScreenAnimation=false, we skip the animation by setting the initial value to true
-    splashScreenDone: props.useSplashScreenAnimation ? false : true
-  });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(GlobalStateContext.Provider, {
-    value: {
-      globalState,
-      dispatch
-    }
-  }, props.children);
-}
-function useGlobalState() {
-  const context = react__WEBPACK_IMPORTED_MODULE_0___default().useContext(GlobalStateContext);
-
-  if (context === undefined) {
-    throw new Error('useGlobalState must be used within a GlobalStateProvider');
-  }
-
-  return context;
-}
-
-function globalStateReducer(state, action) {
-  switch (action.type) {
-    case ActionType.SetTheme:
-      {
-        return { ...state,
-          theme: action.value
-        };
-      }
-
-    case ActionType.SetSplashScreenDone:
-      {
-        return { ...state,
-          splashScreenDone: action.value
-        };
-      }
-
-    default:
-      {
-        throw new Error(`Unhandled action type`);
-      }
-  }
-}
-
-function initializeTheme(defaultTheme, useDarkMode) {
-  const darkModeEnabled = (0,_hooks_useMediaQuery__WEBPACK_IMPORTED_MODULE_1__.useMediaQuery)('(prefers-color-scheme: dark)');
-  let initialTheme = defaultTheme;
-
-  if (useDarkMode && darkModeEnabled) {
-    initialTheme = Theme.Dark;
-  }
-
-  return initialTheme;
-}
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useCastedRef.tsx":
-/*!********************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useCastedRef.tsx ***!
-  \********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useCastedRef": () => (/* binding */ useCastedRef)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-function useCastedRef() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default().useRef();
-}
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useMediaQuery.tsx":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useMediaQuery.tsx ***!
-  \*********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useMediaQuery": () => (/* binding */ useMediaQuery)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-function useMediaQuery(query) {
-  if (typeof window === 'undefined' || typeof window.matchMedia === 'undefined') {
-    return false;
-  }
-
-  const mediaQuery = window.matchMedia(query);
-  const [match, setMatch] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(mediaQuery.matches);
-  react__WEBPACK_IMPORTED_MODULE_0___default().useEffect(() => {
-    function handleMatch() {
-      setMatch(mediaQuery.matches);
-    }
-
-    if (mediaQuery.addEventListener) {
-      mediaQuery.addEventListener('change', handleMatch);
-      return () => mediaQuery.removeEventListener('change', handleMatch);
-    } else {
-      // backwards compatibility
-      // https://betterprogramming.pub/using-window-matchmedia-in-react-8116eada2588
-      mediaQuery.addListener(handleMatch);
-      return () => mediaQuery.removeListener(handleMatch);
-    }
-  }, []);
-  return match;
-}
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useOnScreen.tsx":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useOnScreen.tsx ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useOnScreen": () => (/* binding */ useOnScreen)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
- // https://usehooks.com/useOnScreen/
-
-function useOnScreen(ref, threshold = 0.25) {
-  const {
-    0: isIntersecting,
-    1: setIntersecting
-  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    const element = ref.current;
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIntersecting(true);
-        observer.unobserve(entry.target);
-      }
-    }, {
-      threshold
-    });
-    if (element && element instanceof Element) observer.observe(element);
-    return () => {
-      if (element && element instanceof Element) observer.unobserve(element);
-    };
-  }, [ref, threshold]);
-  return isIntersecting;
-}
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useSiteConfiguration.tsx":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useSiteConfiguration.tsx ***!
-  \****************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "query": () => (/* binding */ query),
-/* harmony export */   "useSiteConfiguration": () => (/* binding */ useSiteConfiguration)
-/* harmony export */ });
-/* harmony import */ var _public_page_data_sq_d_1094019748_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../public/page-data/sq/d/1094019748.json */ "./public/page-data/sq/d/1094019748.json");
-
-function useSiteConfiguration() {
-  const data = _public_page_data_sq_d_1094019748_json__WEBPACK_IMPORTED_MODULE_0__.data;
-  return data.allSettingsJson.settings[0].siteConfiguration;
-}
-const query = "1094019748";
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useSiteMetadata.tsx":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/hooks/useSiteMetadata.tsx ***!
-  \***********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "query": () => (/* binding */ query),
-/* harmony export */   "useSiteMetadata": () => (/* binding */ useSiteMetadata)
-/* harmony export */ });
-/* harmony import */ var _public_page_data_sq_d_36698639_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../public/page-data/sq/d/36698639.json */ "./public/page-data/sq/d/36698639.json");
-
-function useSiteMetadata() {
-  const data = _public_page_data_sq_d_36698639_json__WEBPACK_IMPORTED_MODULE_0__.data;
-  return data.allSettingsJson.settings[0].siteMetadata;
-}
-const query = "36698639";
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/pages/404.tsx":
-/*!***********************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/pages/404.tsx ***!
-  \***********************************************************************/
+/***/ 310:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1584,91 +284,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ NotFoundPage)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8005);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Page */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Page/index.tsx");
-/* harmony import */ var _components_Section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Section */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Section/index.tsx");
-/* harmony import */ var _components_Seo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Seo */ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Seo/index.tsx");
-
-
-
-
-function NotFoundPage() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Seo__WEBPACK_IMPORTED_MODULE_3__.Seo, {
-    title: "404: Not found",
-    noIndex: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Page__WEBPACK_IMPORTED_MODULE_1__.Page, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Section__WEBPACK_IMPORTED_MODULE_2__.Section, {
-    heading: "Not Found",
-    anchor: "404"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "You just hit a route that doesn't exist... the sadness."))));
-}
+/* harmony import */ var _components_Page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(965);
+/* harmony import */ var _components_Section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6913);
+/* harmony import */ var _components_Seo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7102);
+function NotFoundPage(){return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment),null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Seo__WEBPACK_IMPORTED_MODULE_3__/* .Seo */ .p,{title:"404: Not found",noIndex:true}),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Page__WEBPACK_IMPORTED_MODULE_1__/* .Page */ .T,null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Section__WEBPACK_IMPORTED_MODULE_2__/* .Section */ .$,{heading:"Not Found",anchor:"404"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p",null,"You just hit a route that doesn't exist... the sadness."))));}
 
 /***/ }),
 
-/***/ "./node_modules/@fontsource/roboto/400.css":
-/*!*************************************************!*\
-  !*** ./node_modules/@fontsource/roboto/400.css ***!
-  \*************************************************/
-/***/ (() => {
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@fontsource/roboto/700.css":
-/*!*************************************************!*\
-  !*** ./node_modules/@fontsource/roboto/700.css ***!
-  \*************************************************/
-/***/ (() => {
-
-
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/Animation/style.css":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/Animation/style.css ***!
-  \****************************************************************************************/
-/***/ (() => {
-
-
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/components/CookieBar/style.css":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/components/CookieBar/style.css ***!
-  \****************************************************************************************/
-/***/ (() => {
-
-
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/globalStyles/global.css":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/globalStyles/global.css ***!
-  \*********************************************************************************/
-/***/ (() => {
-
-
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-theme-portfolio-minimal/src/globalStyles/theme.css":
-/*!********************************************************************************!*\
-  !*** ./node_modules/gatsby-theme-portfolio-minimal/src/globalStyles/theme.css ***!
-  \********************************************************************************/
-/***/ (() => {
-
-
-
-/***/ }),
-
-/***/ "./node_modules/react-cookie-consent/build/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/react-cookie-consent/build/index.js ***!
-  \**********************************************************/
+/***/ 2491:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /*! For license information please see index.js.LICENSE.txt */
@@ -1870,7 +495,7 @@ function NotFoundPage() {
           return k;
         },
       });
-    const e = __webpack_require__(/*! react */ "react");
+    const e = __webpack_require__(8005);
     var t = n.n(e),
       r = n(697),
       i = n.n(r),
@@ -2415,28 +1040,6 @@ function NotFoundPage() {
     (module.exports = o);
 })();
 
-
-/***/ }),
-
-/***/ "./public/page-data/sq/d/1094019748.json":
-/*!***********************************************!*\
-  !*** ./public/page-data/sq/d/1094019748.json ***!
-  \***********************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = JSON.parse('{"data":{"allSettingsJson":{"settings":[{"siteConfiguration":{"featureToggles":{"useCookieBar":true,"useDarkModeAsDefault":false,"useDarkModeBasedOnUsersPreference":true},"logo":{"text":"Ridwan Tukale"},"navigation":{"ctaButton":{"label":"Resume","openNewTab":true,"url":"/resume.pdf"},"footer":[{"label":"Privacy","url":"/privacy"},{"label":"Imprint","url":"/imprint"}],"header":[{"label":"About","url":"/#about"},{"label":"Blog","url":"/blog"},{"label":"Projects","url":"/#features"},{"label":"Fikrcamp","url":"/#"}]}}}]}}}');
-
-/***/ }),
-
-/***/ "./public/page-data/sq/d/36698639.json":
-/*!*********************************************!*\
-  !*** ./public/page-data/sq/d/36698639.json ***!
-  \*********************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = JSON.parse('{"data":{"allSettingsJson":{"settings":[{"siteMetadata":{"author":"Ridwan Tukale","avatar":{"childImageSharp":{"gatsbyImageData":{"layout":"constrained","placeholder":{"fallback":"data:image/jpeg;base64,/9j/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAgHCQX/xAAYAQACAwAAAAAAAAAAAAAAAAADBQECBP/aAAwDAQACEAMQAAABtrx8imULvrmwgxX8GqbMwI4FI//EABwQAAIDAAMBAAAAAAAAAAAAAAQGAgMFAAEHFv/aAAgBAQABBQLV1QVjKV2QJis56I/pmPeDpfGzA9ORjxai7zmJ+nKGJGycev/EACERAAEDBAEFAAAAAAAAAAAAAAEAAhEDBBIhIjFBUbHw/9oACAEDAQE/AWVbU2tcue5t1mwU+OsTqpPgxO+ogR3K+9Juw6UF/8QAJBEAAgAFAgcBAAAAAAAAAAAAAQIAAwQSIREiBRMxQVGBsfD/2gAIAQIBAT8Bq0eoqadHYPw+6+fLYab5Zvkq+CXl80IxQkBiGEy6XtjRjkDB6R2b19jU+f2I/8QAKhAAAgIBAwMCBQUAAAAAAAAAAgMBBBEFEiEAExQGMQcQFiMyQWFxkdH/2gAIAQEABj8CdqDPIemuEKCupi4PMgZCKZlcAvAgRE1mFrCJKZ4xLMduu+tIHYqeWu33bbd2JiyIKG1CFCGNgbcMAoyMx8m+mGLu6pqrRqJcmqpcVkeerAQ660u3ugbCnEkFukZiIMd3HS7+rtmwj6ht6Uo9OU/Yluhdjznwu6YSXmm2CkUyID29vPEQu0v1FQSLM/auOXTsrmJxItrvITCYn+RKMSJTE9V7lo5dYsa3Uc0zyW8ivJ98zM4iIgIjP4DEfp1ZCOYV8S/WAhnnbDE12F/Zc9cT+/tH+df/xAAcEAEAAgMAAwAAAAAAAAAAAAABABEhMUFRcYH/2gAIAQEAAT8hd56CmQTWHDzSLs1Bq2D53/UF1DieUhhEBzE5YF2+vImasFG9J9yrernBRpL0bMeMAiKqTDVKrNh1tpaBJk32xw+gCofIy+0z/9oADAMBAAIAAwAAABA38EH/xAAdEQEBAQACAgMAAAAAAAAAAAABESEAMWFxgbHw/9oACAEDAQE/EJ7G7CJkoGumCQo66Cj0kifDz+pEoSqqq1V1VdVdrt3nQ9H1z//EAB4RAQACAgEFAAAAAAAAAAAAAAERMQAhQVFxkbHw/9oACAECAQE/EEZBBJAhJo6NUDBEgBQiIgiOtJ77YBWaYaraumMlrOX7b5z/xAAaEAEBAQEBAQEAAAAAAAAAAAABEQAhMWGR/9oACAEBAAE/EC3XiIvlwufGhlp6vgPQ9wTtglUPOr+wOZL6baanOZp9kpGrHFvb0+YOMatJeoqxLDDoRqvuKqHiabgvobayvAICnDOIuCVsR943sQ5Zv//Z"},"images":{"fallback":{"src":"/static/b1c25bc743fb9ad368cb64363c8c0ffc/93e3f/ridwan.jpg","srcSet":"/static/b1c25bc743fb9ad368cb64363c8c0ffc/e2ba5/ridwan.jpg 25w,\\n/static/b1c25bc743fb9ad368cb64363c8c0ffc/2fed4/ridwan.jpg 50w,\\n/static/b1c25bc743fb9ad368cb64363c8c0ffc/93e3f/ridwan.jpg 100w,\\n/static/b1c25bc743fb9ad368cb64363c8c0ffc/839ae/ridwan.jpg 200w","sizes":"(min-width: 100px) 100px, 100vw"},"sources":[{"srcSet":"/static/b1c25bc743fb9ad368cb64363c8c0ffc/78997/ridwan.webp 25w,\\n/static/b1c25bc743fb9ad368cb64363c8c0ffc/9afd2/ridwan.webp 50w,\\n/static/b1c25bc743fb9ad368cb64363c8c0ffc/e64f1/ridwan.webp 100w,\\n/static/b1c25bc743fb9ad368cb64363c8c0ffc/8b00d/ridwan.webp 200w","type":"image/webp","sizes":"(min-width: 100px) 100px, 100vw"}]},"width":100,"height":100}}},"bio":"Ridwan is a software engineer turn product manager, creating meaningful experiences on the web.","description":"Ridwan is a software engineer turn product manager, creating meaningful experiences on the web.","language":"en","siteUrl":"https://gatsby-starter-portfolio-minimal-theme.netlify.app/","thumbnail":null,"title":"Ridwan Tukale Personal Website","social":{"behance":"https://behance.com","github":"https://github.com/Tukale01","linkedin":"https://www.linkedin.com/in/ridwantukale/","mail":"mailto:ridwan@fikrcamp.com","medium":"https://konstantinmuenster.medium.com","twitter":null},"titleTemplate":"%s · Portfolio Minimal"}}]}}}');
 
 /***/ })
 

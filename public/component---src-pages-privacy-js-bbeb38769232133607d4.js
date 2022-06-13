@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkRidwan_Tukale_Website=self.webpackChunkRidwan_Tukale_Website||[]).push([[844],{8897:function(e,t,n){n.r(t),n.d(t,{default:function(){return i}});var a=n(7294),l=n(8457);function i(){return a.createElement(a.Fragment,null,a.createElement(l.pQ,{title:"Privacy Policy",useTitleTemplate:!0,noIndex:!0}),a.createElement(l.T3,null,a.createElement(l.Ek,{sectionId:"privacy",heading:"Privacy Policy"})))}}}]);
+//# sourceMappingURL=component---src-pages-privacy-js-bbeb38769232133607d4.js.map

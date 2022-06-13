@@ -1,5 +1,5 @@
 exports.components = {
-  "component---cache-dev-404-page-js": () => import("./../../dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
+  "component---cache-caches-gatsby-plugin-offline-app-shell-js": () => import("./../../caches/gatsby-plugin-offline/app-shell.js" /* webpackChunkName: "component---cache-caches-gatsby-plugin-offline-app-shell-js" */),
   "component---node-modules-gatsby-theme-portfolio-minimal-src-pages-404-tsx": () => import("./../../../node_modules/gatsby-theme-portfolio-minimal/src/pages/404.tsx" /* webpackChunkName: "component---node-modules-gatsby-theme-portfolio-minimal-src-pages-404-tsx" */),
   "component---node-modules-gatsby-theme-portfolio-minimal-src-templates-article-index-tsx": () => import("./../../../node_modules/gatsby-theme-portfolio-minimal/src/templates/Article/index.tsx" /* webpackChunkName: "component---node-modules-gatsby-theme-portfolio-minimal-src-templates-article-index-tsx" */),
   "component---node-modules-gatsby-theme-portfolio-minimal-src-templates-article-listing-index-tsx": () => import("./../../../node_modules/gatsby-theme-portfolio-minimal/src/templates/ArticleListing/index.tsx" /* webpackChunkName: "component---node-modules-gatsby-theme-portfolio-minimal-src-templates-article-listing-index-tsx" */),
